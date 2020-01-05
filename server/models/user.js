@@ -1,11 +1,13 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
-    email: DataTypes.STRING,
-    password: DataTypes.STRING
-  }, {});
-  User.associate = function(models) {
-    // associations can be defined here
-  };
-  return User;
-};
+class User {
+  constructor({ id, email, password }) {
+    this.id = id;
+    this.email = email;
+    this.password = password;
+  }
+
+  comparePassword(challenge) {
+    return this.password === challenge;
+  }
+}
+
+module.exports = User;

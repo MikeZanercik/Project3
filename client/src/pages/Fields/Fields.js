@@ -34,9 +34,7 @@ class Fields extends Component {
               <h4>Field 7</h4>
               <FieldImg />
               <h4>Field 8</h4>
-              <FieldImg />
-              
-              
+              <FieldImg />   
           </div>
         </div>
         <div className="row">
