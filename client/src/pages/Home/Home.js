@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
+import "./home.css"
 
-import logo from './logo.svg';
 
 class HomePage extends Component {
   render() {
     return (
-      <div className='Home'>
+      <div className='Home' id="home">
         <div className='row'>
           <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+            <div className="welcomeText">
+            <h1>Striker Soccer Center of Huntersville</h1>
+            <p>Check out games taking place or reserve a field for you and your team.</p>
+            </div>
           </div>
         </div>
       </div>
+      
     );
   }
 }

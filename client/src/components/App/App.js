@@ -11,6 +11,8 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import Fields from "../../pages/Fields/Fields"
+import Reserve from "../../pages/Reserve/Reserve"
 
 import './App.css';
 
@@ -58,6 +60,8 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
+              <Route path="/fields" component={Fields} />
+              <Route path="/reserve" component={Reserve} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>

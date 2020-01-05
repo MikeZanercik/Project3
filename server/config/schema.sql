@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS SoccerCenter_db;
+CREATE DATABASE SoccerCenter_db;
