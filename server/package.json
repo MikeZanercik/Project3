@@ -9,10 +9,14 @@
     "jsonwebtoken": "^8.5.0",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "sequelize": "^5.21.3"
   },
   "scripts": {
     "start": "node server",
     "start:dev": "nodemon"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
   }
 }
