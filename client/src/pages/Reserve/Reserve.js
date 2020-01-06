@@ -5,6 +5,10 @@ import Header from "../../components/Header/header"
 
 
 class Reserve extends Component {
+    state = {
+        date: ""
+    }
+
     render() {
         return (
             <div className='Reserve'>
@@ -15,7 +19,12 @@ class Reserve extends Component {
                 </div>
                 <div className='row'>
                     <div className='col'>
-                        <h1>Reserve a Field</h1>
+                        <h1>Confirm Your Reservation</h1>
+
+                        Date: <input 
+                        type="date"
+                        name="date"
+                        />
 
                     </div>
                 </div>
