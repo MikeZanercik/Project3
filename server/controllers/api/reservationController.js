@@ -13,9 +13,12 @@ reservationController.post("/", function (req, res) {
 
 })
 
-reservationController.get("/", function(req, res){
+reservationController.post("/mine", function(req, res){
     db.Reservation.findAll({
-        include: [db.User, db.Field]
+        include: [db.User, db.Field],
+        where: { 
+            UserId: req.body.loggedUser 
+        }
     })
         .then(dbData => res.json(dbData))
         .catch(err => res.json(err))

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./navigation.css"
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -26,19 +27,16 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Striker Soccer Center</Link>
+          <Link className='navbar-brand' to='/'>Striker Soccer Center</Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
 
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
+              {/* <li className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/fields' onClick={this.toggleCollapse}>Fields</Link>
-              </li>
+              </li> */}
               <li className='nav-item'>
                 <Link className='nav-link' to='/reservation' onClick={this.toggleCollapse}>Reservation</Link>
               </li>

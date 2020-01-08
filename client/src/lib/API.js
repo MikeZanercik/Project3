@@ -29,4 +29,10 @@ export default {
     }
   },
 
+  Reservation: {
+    getMine: function (loggedUser){
+      return axios.post('/api/reservation/mine', {loggedUser});
+    }
+  }
+
 }

@@ -25,9 +25,6 @@ module.exports = {
     },
     {
       name: "Field 8"
-    },
-    {
-      name: "Field 9"
     }
   ], {});
   },

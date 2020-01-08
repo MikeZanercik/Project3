@@ -11,7 +11,6 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
-import Fields from "../../pages/Fields/Fields"
 import Reservation from "../../pages/Reservation/Reservation"
 import Confirmation from "../../pages/Confirmation/confirmation"
 
@@ -47,7 +46,7 @@ class App extends Component {
 
     API.Users.getMe(authToken)
       .then(response => {
-        console.log(response)
+        // console.log(response)
         return response.data
       })
       .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
@@ -64,10 +63,8 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
-              <Route path="/fields" component={Fields} />
               <Route path="/reservation"  render={(props) => <Reservation {...props} user={this.state.auth.user} />} />
-
-              <Route path="/confirmation" component={Confirmation} />
+              <Route path="/confirmation"  render={(props) => <Confirmation {...props} user={this.state.auth.user} />} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>

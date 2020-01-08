@@ -4,7 +4,6 @@ import "./fields.css"
 
 import Footer from "../../components/Footer/footer"
 import Header from "../../components/Header/header"
-// import FieldImg from "../../components/Fields/fields"
 import axios from 'axios';
 
 import AuthContext from '../../contexts/AuthContext'

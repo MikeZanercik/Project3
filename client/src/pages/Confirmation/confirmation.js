@@ -1,39 +1,40 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import API from '../../lib/API';
 
-// import AuthContext from '../../contexts/AuthContext';
+const ConfirmationPage = (props) => {
 
-import axios from 'axios';
+    const [reservations, setReservations] = useState([]);
 
+    useEffect(() => {
 
+        if (!props.user) {
+            return
+        }
 
+        API.Reservation.getMine(props.user.id)
+            .then(response => {
+                return response.data
+            })
+            .then(reservations => setReservations(reservations))
+            .catch(err => console.log(err));
 
-class ConfirmationPage extends Component {
-    state = {
-        user: "",
-        field: "",
-        date: ""
-    }
+    }, [props.user]);
 
-    componentDidMount() {
-
-       
-    }
-
-    render() {
-        return (
-            <div className='ConfirmationPage'>
-                <div className='row'>
-                    <div className='col'>
-                        <div>
-                            <h1>Confirm Your Reservation</h1>
-
-                        </div>
+    return (
+        <div className='ConfirmationPage'>
+            <div className='row'>
+                <div className='col'>
+                    <div>
+                        <h1>Confirm Your Reservation</h1>
+                        <ul>
+                            {reservations.length && reservations.map((reservation) => <li> Field {reservation.FieldsId} at {reservation.date}</li>)}
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-        );
-    }
+    );
 }
 
 export default ConfirmationPage;

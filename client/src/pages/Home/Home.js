@@ -5,7 +5,7 @@ import "./home.css"
 class HomePage extends Component {
   render() {
     return (
-      <div className='Home' id="home">
+      <div className='Home'>
         <div className='row'>
           <div className='col'>
             <div className="welcomeText">
