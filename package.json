@@ -8,7 +8,7 @@
     "install:client": "cd client && yarn",
     "install:server": "cd server && yarn",
     "build": "cd client && yarn build",
-    "start": "if-env NODE_ENV=production && yarn run start:prod || yarn run start:dev",
+    "start": "node server/server.js",
     "start:prod": "node server/server.js",
     "start:dev": "concurrently \"yarn run client:dev\" \"yarn run server:dev\"",
     "client:dev": "cd client && yarn start",
