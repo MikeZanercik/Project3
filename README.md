@@ -17,6 +17,7 @@ The following tools were used:
 - User authorization: Passport NPM
 - Date and time selector: DateTimePicker
 - Automated email confirmation: SendGrid
+- Date and Time formatting: Moment.js
 
 **Striker Soccer Center Reservation Service** was created by: 
 
