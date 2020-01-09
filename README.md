@@ -41,6 +41,7 @@ The following tools were used:
 - Date and time selector: DateTimePicker
 - Automated email confirmation: SendGrid
 - Date and Time formatting: Moment.js
+- Translation: Google Translate
 
 
 
