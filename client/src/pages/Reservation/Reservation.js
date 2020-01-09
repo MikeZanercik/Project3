@@ -61,7 +61,9 @@ class Reservation extends Component {
                                 <button onClick={this.submitReservation}>Confirm Reservation</button>
                             </div>
                         </div>
-
+                    </div>
+                    <div className="col-6">
+                        <img src="https://i.imgur.com/M933d1p.png" className="fieldImage"></img>
                     </div>
                 </div>
             </div>

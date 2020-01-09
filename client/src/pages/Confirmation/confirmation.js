@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import API from '../../lib/API';
+// import "./confimation.css"
 
 const ConfirmationPage = (props) => {
 
@@ -22,13 +23,17 @@ const ConfirmationPage = (props) => {
 
     return (
         <div className='ConfirmationPage'>
-            <div className='row'>
-                <div className='col'>
+            <div className='row justify-content-center'>
+                <div className='col-6'>
                     <div>
-                        <h1>Confirm Your Reservation</h1>
-                        <ul>
-                            {reservations.length && reservations.map((reservation) => <li> Field {reservation.FieldsId} at {reservation.date}</li>)}
-                        </ul>
+                        <div className='card' >
+                            <div className='card-body'>
+                                <h1>Confirm Your Reservation</h1>
+                                <ul>
+                                    {reservations.length && reservations.map((reservation) => <li> Field {reservation.FieldsId} at {reservation.date}</li>)}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
