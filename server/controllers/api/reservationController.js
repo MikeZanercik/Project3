@@ -1,4 +1,4 @@
- const reservationController = require('express').Router();
+const reservationController = require('express').Router();
 const db = require('../../models');
 
 reservationController.post("/", function (req, res) {
@@ -13,11 +13,11 @@ reservationController.post("/", function (req, res) {
 
 })
 
-reservationController.post("/mine", function(req, res){
+reservationController.post("/mine", function (req, res) {
     db.Reservation.findAll({
         include: [db.User, db.Field],
-        where: { 
-            UserId: req.body.loggedUser 
+        where: {
+            UserId: req.body.loggedUser
         }
     })
         .then(dbData => res.json(dbData))

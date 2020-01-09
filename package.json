@@ -20,10 +20,12 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
     "if-env": "^1.0.4",
     "moment": "^2.24.0",
     "mysql": "^2.17.1",
     "mysql2": "^2.1.0",
+    "path": "^0.12.7",
     "react-datetime-picker": "^2.9.0",
     "react-moment": "^0.9.7",
     "sendgrid": "^5.2.3",
