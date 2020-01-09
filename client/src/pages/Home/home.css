@@ -3,3 +3,8 @@
     margin-top: 15vh;
     color: lightgrey
 }
+#translate{
+    position: fixed;
+    bottom: 0;
+    left: 2vw;
+}
