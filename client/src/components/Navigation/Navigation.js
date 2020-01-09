@@ -43,10 +43,10 @@ class Navigation extends Component {
               <li className='nav-item'>
                 <Link className='nav-link' to='/confirmation' onClick={this.toggleCollapse}>Confirmation</Link>
               </li>
-              {user &&
+              {/* {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>}
+                </li>} */}
             </ul>
             <ul className='navbar-nav'>
               {user
