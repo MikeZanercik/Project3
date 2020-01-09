@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import API from '../../lib/API';
+import axios from 'axios';
 
 
 const ConfirmationPage = (props) => {
@@ -21,9 +22,7 @@ const ConfirmationPage = (props) => {
 
     }, [props.user]);
 
-    // sendEmail = () => {
-
-    // }
+    
 
     return (
         <div className='ConfirmationPage'>
