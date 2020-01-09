@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import API from '../../lib/API';
-// import "./confimation.css"
+
 
 const ConfirmationPage = (props) => {
 
@@ -21,6 +21,10 @@ const ConfirmationPage = (props) => {
 
     }, [props.user]);
 
+    // sendEmail = () => {
+
+    // }
+
     return (
         <div className='ConfirmationPage'>
             <div className='row justify-content-center'>
@@ -32,7 +36,7 @@ const ConfirmationPage = (props) => {
                                 <ul>
                                     {reservations.length && reservations.map((reservation) => <li> Field {reservation.FieldsId} at {reservation.date}</li>)}
                                 </ul>
-                                <button>Confirm Reservation</button>
+                                <button onClick={this.sendEmail}>Confirm Reservation</button>
                             </div>
                         </div>
                     </div>

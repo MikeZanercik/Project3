@@ -7,10 +7,10 @@ const util = require('util')
 readFile = util.promisify(fs.readFile)
 
 const MSG = data => ({
-    to: 'test@gmail.com',
+    to: 'michael.zanercik@gmail.com',
     from: 'michael.zanercik@gmail.com',
-    subject: 'Sending with Twilio SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
+    subject: 'Striker Soccer Center Confirmation',
+    text: 'Confirmation of Reservation',
     html: data.html,
 });
 
@@ -23,18 +23,15 @@ const sendMail = (data) => new Promise((resolve, reject) => {
     }
 })
 
-const demo = {
-    name: 'Ben',
-    date: '1/13/2020',
-    time: '3:00 PM'
-}
 
 router.post("/", async (req, res) => {
     try {
+        console.log(req.body)
         html = await readFile(path.join(__dirname, '..', '..', 'lib', 'emailTemplate', 'confirmation.html'), 'utf8')
-        html = html.replace("{{name}}", demo.name)
-        html = html.replace("{{date}}", demo.date)
-        html = html.replace("{{time}}", demo.time)
+        html = html.replace("{{name}}", req.body.email)
+        html = html.replace("{{field}}", req.body.field)
+        html = html.replace("{{date}}", req.body.date)
+        
         const response = sendMail({...req.body, html})
         res.send(response)
     } catch (error) {

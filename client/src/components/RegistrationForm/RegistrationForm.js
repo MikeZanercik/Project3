@@ -72,7 +72,7 @@ class RegistrationForm extends Component {
                   id='password-confirm'
                   type='password'
                   name='passwordConfirm'
-                  placeholder='password (again)'
+                  placeholder='confirm password'
                   value={passwordConfirm}
                   onChange={this.handleInputChange}
                 />
