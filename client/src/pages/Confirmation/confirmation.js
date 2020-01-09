@@ -36,7 +36,8 @@ const ConfirmationPage = (props) => {
                                 <ul>
                                     {reservations.length && reservations.map((reservation) => <li> Field {reservation.FieldsId} at {reservation.date}</li>)}
                                 </ul>
-                                <button onClick={this.sendEmail}>Confirm Reservation</button>
+                                {/* <button onClick={this.sendEmail}>Confirm Reservation</button> */}
+                                <button>Confirm Reservation</button>
                             </div>
                         </div>
                     </div>
