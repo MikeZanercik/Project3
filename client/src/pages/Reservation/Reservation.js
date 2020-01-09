@@ -40,7 +40,7 @@ class Reservation extends Component {
                         <div className="card">
                             <div className="card-body">
                                 <h3>Select a Field</h3>
-                                <select value={this.state.value} onChange={this.handleChange}>
+                                <select value={this.state.value} onChange={this.handleChange} className="selector">
                                     <option value="1">Field 1</option>
                                     <option value="2">Field 2</option>
                                     <option value="3">Field 3</option>
@@ -50,7 +50,7 @@ class Reservation extends Component {
                                     <option value="7">Field 7</option>
                                     <option value="8">Field 8</option>
                                 </select>
-                                <br />
+                                <hr></hr>
                                 <h3>Select a Date and Time</h3>
                                 <DateTimePicker
                                     onChange={this.onDateChange}
@@ -58,12 +58,12 @@ class Reservation extends Component {
                                     disableClock={true}
                                 />
                                 <br />
-                                <button onClick={this.submitReservation}>Confirm Reservation</button>
+                                <button onClick={this.submitReservation}>Add Reservation</button>
                             </div>
                         </div>
                     </div>
                     <div className="col-6">
-                        <img src="https://i.imgur.com/M933d1p.png" className="fieldImage"></img>
+                        <img src="https://i.imgur.com/M933d1p.png" alt="fields" className="fieldImage"></img>
                     </div>
                 </div>
             </div>

@@ -7,8 +7,17 @@
 button{
     margin: 3vh;
 }
+h3{
+    margin-bottom: 3vh;;
+}
+hr{
+    color: black;
+}
 
 .fieldImage {
     width: 100%;
     border-radius: 5px;
+}
+.selector{
+    margin-bottom: 3vh;
 }

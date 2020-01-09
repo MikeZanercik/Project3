@@ -28,10 +28,11 @@ const ConfirmationPage = (props) => {
                     <div>
                         <div className='card' >
                             <div className='card-body'>
-                                <h1>Confirm Your Reservation</h1>
+                                <h1>Confirm Your Reservations</h1>
                                 <ul>
                                     {reservations.length && reservations.map((reservation) => <li> Field {reservation.FieldsId} at {reservation.date}</li>)}
                                 </ul>
+                                <button>Confirm Reservation</button>
                             </div>
                         </div>
                     </div>

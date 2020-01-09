@@ -31,6 +31,7 @@ class RegistrationForm extends Component {
       <div className='LoginForm'>
         <div className='card'>
           <div className='card-body'>
+            <h1>Register</h1>
             <form onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">

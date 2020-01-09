@@ -22,11 +22,6 @@ class Register extends Component {
   render() {
     return (
       <div className='Register'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Register</h1>
-          </div>
-        </div>
         {this.state.error &&
           <div className='row'>
             <div className='col'>
@@ -35,8 +30,8 @@ class Register extends Component {
               </div>
             </div>
           </div>}
-        <div className='row'>
-          <div className='col'>
+        <div className='row justify-content-center'>
+          <div className='col-6'>
             <RegistrationForm onSubmit={this.handleSubmit} />
           </div>
         </div>
