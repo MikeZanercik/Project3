@@ -7,7 +7,7 @@ const util = require('util')
 readFile = util.promisify(fs.readFile)
 
 const MSG = data => ({
-    to: 'bensonb10@gmail.com',
+    to: 'test@gmail.com',
     from: 'michael.zanercik@gmail.com',
     subject: 'Sending with Twilio SendGrid is Fun',
     text: 'and easy to do anywhere, even with Node.js',
